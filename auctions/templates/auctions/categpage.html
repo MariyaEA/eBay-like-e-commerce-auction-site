@@ -1,0 +1,19 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+{% block body %}
+<div class="container">
+    <img class="c" src="{% static 'auctions\image\c.png' %}" />
+
+</div>
+<div class="container">
+    <ul>
+        {% for i in items %}
+        <li>
+            <a href="{% url 'category' i.category %}">{{i.category}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    
+
+</div>
+{% endblock %}

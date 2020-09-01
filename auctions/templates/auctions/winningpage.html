@@ -1,0 +1,19 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="container">
+    <h2>{{title}}</h2>
+</div>
+<div class="container" id="Listings">
+    <h3>This Listing is no longer active.</h3>
+    {% if cb.winner == user.username %}
+    <h3>	&#x1F389;	&#x1F389; CONGRATULATIONS 	&#x1F389;	&#x1F389;</h3>
+    <p>You have WON the Auction</p>
+    {% endif %}
+    <ul>
+        <li><b>Owner:</b>{{cb.owner}}</li>
+        <li><b>Winner:</b>{{cb.winner}}</li>
+        <li><b>Winning Price:</b>{{cb.winprice}}</li>
+    </ul>
+</div>
+{% endblock %}
